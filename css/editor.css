@@ -1,0 +1,92 @@
+:root {
+    --bg: rgb(100, 100, 100);
+    box-sizing: border-box;
+    --heading-height: 30px;
+    --toolbar-width: 50px;
+    --border: 15px;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--bg);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#editor {
+    display: flex;
+    /* align-items: center; */
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+}
+
+#heading {
+    height: var(--heading-height);
+    background-color: aqua;
+}
+
+#toolbar {
+    width: var(--toolbar-width);
+    height: calc(100vh - var(--heading-height));
+    /* margin-right: auto; */
+}
+
+#canvas-wrapper {
+    max-width:  calc(100vw - var(--toolbar-width)  - var(--border));
+    height: auto;
+    /* box-sizing: border-box; */
+    /* aspect-ratio: 1 / 1; */
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    margin-top: calc(var(--border) / 2);
+}
+
+canvas {
+    max-height: calc(100vh - var(--heading-height) - var(--border));
+}
+
+/* #canvas-wrapper {
+    max-width: calc(100vw - 2 * var(--border));
+    max-height: calc(100vh - 2 * var(--border) - 100px);
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.tool-button {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-color: red;
+}
+
+/* #tool-selector {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg);
+}
+
+.radial {
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+[data-selected="false"] {
+    background-color: var(--bg);
+}
+
+[data-selected="true"] {
+    background-color: rgb(68, 105, 187);
+}
+
+[data-selected="false"]:hover {
+    background-color: rgb(150, 150, 150);
+} */
